@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: grey;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        section {
+            background: lightgray;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 30px 10px 30px black;
+            transition: .5s all;
+        }
+
+        section:hover {
+            background: white;
+        }
+
+        p {
+            font-size: 80px;
+        }
+
+        button {
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: .2s all;
+        }
+
+        button:hover {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Contador</h1>
+        <p></p>
+        <button onclick="add()">aumentar</button>
+    </section>
+    <script>
+
+        let numero = 0
+        
+        const add = () => {
+            numero++
+            render()
+        }
+
+        function render() {
+            const p = document.querySelector("p")
+            p.innerText = numero
+        }
+
+        render()
+    </script>
+</body>
+</html>
